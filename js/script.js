@@ -1,23 +1,23 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
+// Copyright (c) 2022 Parsa Tahavori All rights reserved
 //
 // Created by: Parsa Tahavori
-// Created on: Sep 2020
+// Created on: Mar 2022
 // This file contains the JS functions for index.html
 
-"use strict"
-
+'use strict'
 /**
- * Check servie worker.
+ * This function calculates the the pay and government payment 
  */
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
-    scope: "/ICS2O-PWA-Test/",
-  })
-}
-
-/**
- * This function displays an alert.
- */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+function calculate () {
+  // input
+  const hoursWorked = parseInt(document.getElementById("number--of-hours-worked").value)
+  const hourlyRate = parseInt(document.getElementById("hourly-rate").value)
+  // process
+  const pay = (hoursWorked * hourlyRate) * (1.00 - 0.18)
+  const taxes = (hoursWorked * hourlyRate) * 0.18
+  // output
+  document.getElementById("payment").innerHTML =
+    "Your pay will be: " + ' $' + pay.toFixed(2)
+  document.getElementById("income-tax").innerHTML =
+    "The government will take: " + ' $' + taxes.toFixed(2)
 }
