@@ -1,4 +1,4 @@
-# ICS2O-templete-use
+# ICS2O-ICS2O-UNIT2-5
 
 [![Mr Coxall's Super Linter](https://github.com/parsa-tahavori/ICS2O-Templete/workflows/Mr%20Coxall's%20Super%20Linter/badge.svg)](https://github.com/parsa-tahavori/ICS2O-Templete/actions/)
 
